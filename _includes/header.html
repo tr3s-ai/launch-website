@@ -1,0 +1,19 @@
+{% assign lang = page.lang | default: 'es' %}
+{% if lang == 'en' %}
+  {% assign l_sol = 'Solutions' %}{% assign l_cases = 'Use cases' %}{% assign l_about = 'About' %}{% assign l_contact = 'Contact' %}{% assign l_cta = 'Book 30 min' %}{% assign l_navlabel = 'Main' %}{% assign l_langlabel = 'Language' %}{% assign home_url = '/en/' %}
+{% else %}
+  {% assign l_sol = 'Soluciones' %}{% assign l_cases = 'Casos de uso' %}{% assign l_about = 'Nosotros' %}{% assign l_contact = 'Contacto' %}{% assign l_cta = 'Agenda 30 min' %}{% assign l_navlabel = 'Principal' %}{% assign l_langlabel = 'Idioma' %}{% assign home_url = '/' %}
+{% endif %}
+<header class="hdr"><div class="wrap nav">
+<a href="{{ home_url | relative_url }}" aria-label="tr3s.ai, {% if lang == 'en' %}home{% else %}inicio{% endif %}" style="display: inline-flex; padding-block: 8px"><img src="{{ '/assets/img/logos/primary-horizontal-transparent.png' | relative_url }}" alt="tr3s.ai" style="height: 26px; width: auto; display: block"></a>
+<nav class="navlinks" aria-label="{{ l_navlabel }}">
+<a href="{{ '/soluciones/' | relative_url }}"{% if page.active == 'soluciones' %} class="on" aria-current="page"{% endif %}>{{ l_sol }}</a>
+<a href="{{ '/casos/' | relative_url }}"{% if page.active == 'casos' %} class="on" aria-current="page"{% endif %}>{{ l_cases }}</a>
+<a href="{{ '/nosotros/' | relative_url }}"{% if page.active == 'nosotros' %} class="on" aria-current="page"{% endif %}>{{ l_about }}</a>
+<a href="{{ '/contacto/' | relative_url }}"{% if page.active == 'contacto' %} class="on" aria-current="page"{% endif %}>{{ l_contact }}</a>
+</nav>
+<div class="navend">
+<div class="lang" role="group" aria-label="{{ l_langlabel }}"><a href="{{ '/' | relative_url }}"{% if lang != 'en' %} class="on" aria-current="page"{% else %} hreflang="es-MX" lang="es-MX"{% endif %}>ES</a><a href="{{ '/en/' | relative_url }}"{% if lang == 'en' %} class="on" aria-current="page"{% else %} hreflang="en" lang="en"{% endif %}>EN</a></div>
+{% unless page.active == 'contacto' %}<a class="btn btn-sm" href="{{ '/contacto/' | relative_url }}">{{ l_cta }}</a>{% endunless %}
+</div>
+</div></header>
