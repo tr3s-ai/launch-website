@@ -1,9 +1,11 @@
 title: "tr3s.ai"
 description: "Datos, analítica e IA para empresas en México y LATAM."
-# For a custom domain set url to https://tr3s.ai and leave baseurl empty.
-# For a project page (https://<user>.github.io/<repo>) set baseurl: "/<repo>".
-url: ""
-baseurl: ""
+# Currently served as a GitHub Pages PROJECT page at
+# https://tr3s-ai.github.io/launch-website/ — baseurl must be the repo path so
+# asset/link URLs resolve. WHEN the custom domain tr3s.ai is connected (served
+# at the root), change these to:  url: "https://tr3s.ai"  and  baseurl: ""
+url: "https://tr3s-ai.github.io"
+baseurl: "/launch-website"
 lang: es
 
 # ── Integration endpoints (fill these in — see README) ────────────────
