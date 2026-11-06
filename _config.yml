@@ -1,0 +1,38 @@
+title: "tr3s.ai"
+description: "Datos, analítica e IA para empresas en México y LATAM."
+# For a custom domain set url to https://tr3s.ai and leave baseurl empty.
+# For a project page (https://<user>.github.io/<repo>) set baseurl: "/<repo>".
+url: ""
+baseurl: ""
+lang: es
+
+# ── Integration endpoints (fill these in — see README) ────────────────
+# Contact form backend (keeps the design's custom form; just POSTs here).
+# Web3Forms: create a key at https://web3forms.com (free, no account) and
+# paste it below. Formspree works too — see README for the swap.
+web3forms_key: "9aad7dc7-24d8-4d07-9373-c52c84da966e"
+
+# beehiiv newsletter. Create the new tr3s.ai publication in the beehiiv
+# dashboard, add an *embedded* subscribe form, and paste its embed URL
+# (https://embeds.beehiiv.com/<uuid>) here. Until then the footer/section
+# show a styled placeholder.
+beehiiv_embed_url: ""
+
+# Contact details used across the site.
+email_es: "hola@tr3s.ai"
+email_en: "hello@tr3s.ai"
+whatsapp_url: "https://wa.me/525500000000"
+whatsapp_label: "[+52 55 0000 0000]"
+calendar_url: "https://calendar.app.google/"
+
+# ── Jekyll build ──────────────────────────────────────────────────────
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .context/
+  - vendor/

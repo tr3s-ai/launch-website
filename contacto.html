@@ -1,0 +1,58 @@
+---
+layout: default
+permalink: /contacto/
+lang: es
+html_lang: es-MX
+active: contacto
+title: "Contacto — tr3s.ai"
+description: "Agenda 30 minutos con un socio de tr3s. Revisamos tus KPIs prioritarios y te decimos con claridad si podemos ayudarte."
+---
+
+<section class="wrap pagehero">
+<p class="eyebrow">Contacto</p>
+<h1 class="h-page" style="max-width: 14em">Habla directo con un socio.</h1>
+<p class="lede">Elige un horario de 30 minutos. Revisamos tus KPIs prioritarios y te decimos con claridad si podemos ayudarte y cuál sería el primer paso.</p>
+</section>
+
+<section class="wrap" style="padding-bottom: clamp(4rem, 8vw, 6rem); display: flex; flex-wrap: wrap; gap: 16px; align-items: stretch">
+
+<!-- Scheduler (primary) -->
+<div class="card" style="flex: 999 1 34rem; min-width: 0; gap: 20px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: center">
+<h2 class="h-card">Agenda 30 min</h2>
+<span class="muted small">Hora del centro de México</span>
+</div>
+<div class="ph" style="min-height: 420px; place-content: center; text-align: center; justify-items: center">
+<b>[Agenda de citas de Google Calendar incrustada]</b>
+<span class="muted small">Disponibilidad de los tres socios · confirmación por correo con enlace de Google Meet</span>
+<a class="btn" href="{{ site.calendar_url }}" style="margin-top: 12px">Ver horarios disponibles</a>
+</div>
+</div>
+
+<!-- Channels -->
+<div style="flex: 1 1 22rem; min-width: 0; display: grid; gap: 16px; align-content: start">
+<div class="card">
+<h2 class="h-card">Otros canales</h2>
+<dl style="margin: 0; display: grid; gap: 0">
+<div class="svc"><span>Correo</span><a class="tlink" href="mailto:{{ site.email_es }}" style="font-size: 18px">{{ site.email_es }}</a></div>
+<div class="svc"><span>WhatsApp</span><a class="tlink" href="{{ site.whatsapp_url }}" style="font-size: 18px">{{ site.whatsapp_label }}</a></div>
+<div class="svc"><span>Oficina</span><b style="font-weight: 500">[Calle y número, colonia]<br>Ciudad de México, [C.P.]</b></div>
+</dl>
+<p class="muted small" style="border-top: 1px solid #374151; padding-top: 14px">Respondemos en menos de 24 horas hábiles. Firmamos acuerdo de confidencialidad antes de revisar cualquier dato.</p>
+</div>
+
+<form class="card" id="contact-form" aria-label="Escríbenos" style="gap: 16px"
+      data-key="{{ site.web3forms_key }}" data-lang="es">
+<h2 class="h-card">¿Prefieres escribirnos?</h2>
+<input type="hidden" name="access_key" value="{{ site.web3forms_key }}">
+<input type="hidden" name="subject" value="Nuevo mensaje de contacto — tr3s.ai">
+<input type="hidden" name="from_name" value="tr3s.ai (sitio web)">
+<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+<div class="field"><label for="c-nombre">Nombre</label><input id="c-nombre" name="name" type="text" autocomplete="name" required></div>
+<div class="field"><label for="c-correo">Correo de trabajo</label><input id="c-correo" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="c-msg">¿En qué te podemos ayudar?</label><textarea id="c-msg" name="message" rows="3" required></textarea></div>
+<button class="btn2" type="submit" style="justify-self: start">Enviar mensaje</button>
+<p class="form-status" aria-live="polite" role="status"></p>
+</form>
+</div>
+</section>

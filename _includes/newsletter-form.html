@@ -1,0 +1,17 @@
+{%- comment -%}
+Reusable beehiiv newsletter signup. Params: include.id, include.cta, include.placeholder, include.note.
+When site.beehiiv_embed_url is set, the form POSTs the email to beehiiv; until
+then it renders disabled with a "coming soon" note so the design is complete.
+{%- endcomment -%}
+<form class="nl-form" id="{{ include.id }}"
+      data-beehiiv="{{ site.beehiiv_embed_url }}"
+      {% if site.beehiiv_embed_url == "" %}data-disabled="true"{% endif %}>
+  <label class="field" style="flex:1 1 16rem;min-width:0">
+    <span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Email</span>
+    <input type="email" name="email" required autocomplete="email"
+           placeholder="{{ include.placeholder }}"
+           {% if site.beehiiv_embed_url == "" %}disabled{% endif %}>
+  </label>
+  <button class="btn" type="submit" {% if site.beehiiv_embed_url == "" %}disabled{% endif %}>{{ include.cta }}</button>
+  <p class="form-status" aria-live="polite" role="status">{% if site.beehiiv_embed_url == "" %}{{ include.note }}{% endif %}</p>
+</form>
