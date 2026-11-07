@@ -4,11 +4,26 @@
 {% include head.html %}
 </head>
 <body>
+{% if page.mobile_include %}
+<div class="t3 site-desktop">
+{% include header.html %}
+{{ content }}
+{% include footer.html %}
+</div>
+<div class="site-mobile"><div class="m">
+{% include m/header.html %}
+{% include {{ page.mobile_include }} %}
+{% include m/footer.html %}
+{% include m/menu.html %}
+</div></div>
+{% else %}
 <div class="t3">
 {% include header.html %}
 {{ content }}
 {% include footer.html %}
 </div>
+{% endif %}
 <script src="{{ '/assets/js/forms.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/mobile.js' | relative_url }}" defer></script>
 </body>
 </html>

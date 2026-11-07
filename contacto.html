@@ -4,6 +4,8 @@ permalink: /contacto/
 lang: es
 html_lang: es-MX
 active: contacto
+mobile_include: m/contacto.html
+m_no_dock: true
 title: "Contacto — tr3s.ai"
 description: "Agenda 30 minutos con un socio de tr3s. Revisamos tus KPIs prioritarios y te decimos con claridad si podemos ayudarte."
 ---
@@ -42,7 +44,7 @@ description: "Agenda 30 minutos con un socio de tr3s. Revisamos tus KPIs priorit
 </div>
 
 <form class="card" id="contact-form" aria-label="Escríbenos" style="gap: 16px"
-      data-key="{{ site.web3forms_key }}" data-lang="es">
+      data-web3form data-key="{{ site.web3forms_key }}" data-lang="es">
 <h2 class="h-card">¿Prefieres escribirnos?</h2>
 <input type="hidden" name="access_key" value="{{ site.web3forms_key }}">
 <input type="hidden" name="subject" value="Nuevo mensaje de contacto — tr3s.ai">
