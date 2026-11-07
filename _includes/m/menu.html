@@ -1,0 +1,25 @@
+<div class="m-menu" id="m-menu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menú">
+<header class="top">
+<a href="{{ '/' | relative_url }}" aria-label="tr3s.ai, inicio" style="display:inline-flex;padding-block:11px"><img src="{{ '/assets/img/logos/primary-horizontal-transparent.png' | relative_url }}" alt="tr3s.ai" style="height:22px;width:auto;display:block"></a>
+<div class="top-r">
+<div class="lang" role="group" aria-label="Idioma"><a href="{{ '/' | relative_url }}" class="on" aria-current="page">ES</a><a href="{{ '/en/' | relative_url }}" hreflang="en" lang="en">EN</a></div>
+<button class="ibtn" type="button" data-menu-close aria-label="Cerrar menú"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+</header>
+<nav class="big-nav mx" aria-label="Principal" style="padding-top:24px">
+<a href="{{ '/' | relative_url }}">Inicio<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="{{ '/soluciones/' | relative_url }}">Soluciones<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="{{ '/casos/' | relative_url }}">Casos de uso<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="{{ '/nosotros/' | relative_url }}">Nosotros<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a href="{{ '/contacto/' | relative_url }}">Contacto<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</nav>
+<div class="mx" style="margin-top:auto;padding-bottom:28px;display:grid;gap:12px">
+<p class="eyebrow">Contacto directo</p>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+<a class="btn2" href="{{ site.whatsapp_url }}" style="font-size:15px">WhatsApp</a>
+<a class="btn2" href="mailto:{{ site.email_es }}" style="font-size:15px">Correo</a>
+</div>
+<a class="btn" href="{{ '/contacto/' | relative_url }}">Agenda 30 min con un socio</a>
+<p class="muted small" style="text-align:center">Respondemos en menos de 24 horas hábiles.</p>
+</div>
+</div>
